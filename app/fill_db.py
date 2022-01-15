@@ -1,13 +1,16 @@
 import csv
 from datetime import datetime
 
-from app import Event
-from app import db
+from models import db, Event
 
-from config import COLUMN_NAME_INDEXES
+from configs.config import COLUMN_NAME_INDEXES
 
 
-def fill_db():
+def fill_db() -> None:
+    """
+    Just moves data from .csv file to DB.
+    :return: None
+    """
     with open("../data.csv") as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=";")
 
