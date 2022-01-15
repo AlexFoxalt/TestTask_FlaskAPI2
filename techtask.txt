@@ -15,34 +15,34 @@ Source data is csv file containing following data:
     ● Several event attributes (columns asin, brand, etc)
 
 You are expected to create two API methods:
-    GET /api/info
+  ✓ GET /api/info
     Example:
     http://localhost:5000/api/info
 This method doesn’t require any parameters
-
 Returns: Information about possible filtering (list of attributes and list of values for each attribute)
-    GET /api/timeline
+
+  ✓ GET /api/timeline
     Example:
     http://localhost:5000/api/timeline?startDate=2019-01-01&endDate=2020-
     01-01&Type=cumulative&Grouping=weekly&attr1=value1&attr2=value2
 Parameters:
-    ● startDate
-    ● endDate
-    ● Type (cumulative or usual)
-    ● Grouping (weekly, bi-weekly or monthly)
-    ● Filters (attributes and values)
+  ✓ ● startDate
+  ✓ ● endDate
+  ✓ ● Type (cumulative or usual)
+  ✓ ● Grouping (weekly, bi-weekly or monthly)
+  ✓ ● Filters (attributes and values)
 Grouping types:
 You need to aggregate data during the period (from startDate to endDate):
-    ● weekly (data for each week)
-    ● bi - weekly (data for each 2 weeks)
-    ● monthly (data for each month)
+  ✓ ● weekly (data for each week)
+  ✓ ● bi - weekly (data for each 2 weeks)
+  ✓ ● monthly (data for each month)
 Returns: JSON with timeline information according to input parameters:
-    ● Each point on the graph will be in a format:
+  ✓ ● Each point on the graph will be in a format:
         ○ data type - dict:
             ■ keys data type - str
             ■ values data type - int (number of events during this period)
 
-    ● The response should have “timeline”(str) as a key, value - list of dicts with timeline data.
+  ✓ ● The response should have “timeline”(str) as a key, value - list of dicts with timeline data.
     ● Example of response:
         {“timeline”: [{“date”: “2019-01-01”, value: 10}, ... ] }
 

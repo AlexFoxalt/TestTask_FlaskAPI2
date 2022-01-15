@@ -8,8 +8,8 @@ from config import COLUMN_NAME_INDEXES
 
 
 def fill_db():
-    with open('../data.csv') as csv_file:
-        csv_reader = csv.reader(csv_file, delimiter=';')
+    with open("../data.csv") as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=";")
 
         # Skip the row with column names
         next(csv_reader)
@@ -22,17 +22,19 @@ def fill_db():
         timestamp = COLUMN_NAME_INDEXES.get("timestamp")
 
         for row in csv_reader:
-            db.session.add(Event(
-                id=row[identifier],
-                asin=row[asin],
-                brand=row[brand],
-                source=row[source],
-                stars=row[stars],
-                timestamp=datetime.fromtimestamp(int(row[timestamp]))
-            ))
+            db.session.add(
+                Event(
+                    id=row[identifier],
+                    asin=row[asin],
+                    brand=row[brand],
+                    source=row[source],
+                    stars=row[stars],
+                    timestamp=datetime.fromtimestamp(int(row[timestamp])),
+                )
+            )
 
         db.session.commit()
-        print('DB filled successfully!')
+        print("DB filled successfully!")
 
 
 if __name__ == "__main__":
