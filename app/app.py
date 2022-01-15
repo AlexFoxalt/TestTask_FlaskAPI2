@@ -35,10 +35,16 @@ class Info(Resource):
         :return: Dict with some info about API which will be formatted to JSON
         """
         return {
-            "startDate": "Start of period in format YYYY-MM-DD",
-            "endDate": "End of period in format YYYY-MM-DD",
-            "Type": POSSIBLE_TYPES,
-            "Grouping": POSSIBLE_GROUPINGS,
+            "startDate": "[required] Start of period in format YYYY-MM-DD",
+            "endDate": "[required] End of period in format YYYY-MM-DD",
+            "Type": {
+                "default": "usual",
+                "choices": POSSIBLE_TYPES
+            },
+            "Grouping": {
+                "default": "weekly",
+                "choices": POSSIBLE_GROUPINGS
+            },
             "Filters": get_possible_filters(),
         }
 

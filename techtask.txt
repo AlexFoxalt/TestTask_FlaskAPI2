@@ -48,12 +48,12 @@ Returns: JSON with timeline information according to input parameters:
 
 
 Technical requirements:
-    ● Python 3.7+ (Provide version in Readme file)
-    ● Flask or extensions (Flask-RESTful, Flask-RESTX)
-    ● Use RDMS (sqlite)
-    ● Query params validation (Pydantic or Marshmallow)
-    ● Development / Production environment
-    ● API methods test covering (Pytest, Unitetest)
-    ● PEP8 code style (You can use flake8 to check)
-    ● Readme file with the project description in repo
-    ● Other details are up to you
+  ✓ ● Python 3.7+ (Provide version in Readme file)
+  ✓ ● Flask or extensions (Flask-RESTful, Flask-RESTX)
+  ✓ ● Use RDMS (sqlite)
+  ✓ ● Query params validation (Pydantic or Marshmallow)
+  ✓ ● Development / Production environment
+  ✓ ● API methods test covering (Pytest, Unitetest)
+  ✓ ● PEP8 code style (You can use flake8 to check)
+  ✓ ● Readme file with the project description in repo
+  ✓ ● Other details are up to you

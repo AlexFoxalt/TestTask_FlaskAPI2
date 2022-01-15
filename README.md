@@ -1,5 +1,9 @@
-# Test Task Flask CSV
-~
+# TestTask Flask-REST
+Web application, performed via Flask-REST.  
+Parses data from .csv files and writes it into DB.  
+Handles 3 possible GET requests.  
+Formats response as JSON, filled by data from db, filtered according to passed params.  
+Main technologies: *Python 3.10, Flask, SQLAlchemy, Pydantic, Pandas*
 
 
 ## Development flow
@@ -32,4 +36,8 @@
 - Made full refactoring of project structure.
 - Added and fulfilled: *models.py, utils.py, validators.py*
 - Added tests module
-- Wrote a coule tests for *app.py*
+- Wrote a couple tests for *app.py*
+
+**[1.04] *15.01*:**
+- All API request-cases covered by tests *(54 tests)*
+- All tasks from *techtask.txt* are done
