@@ -60,6 +60,8 @@ class EventModel(BaseModel):
             )
         return val
 
+    # Filters
+
     @validator("asin")
     def asin_validator(cls, val):
         asins = get_values("asin")

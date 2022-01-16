@@ -41,3 +41,6 @@ Main technologies: *Python 3.10, Flask, SQLAlchemy, Pydantic, Pandas*
 **[1.04] *15.01*:**
 - All API request-cases covered by tests *(54 tests)*
 - All tasks from *techtask.txt* are done
+
+**[1.05] *16.01*:**
+- Minor and cosmetic changes

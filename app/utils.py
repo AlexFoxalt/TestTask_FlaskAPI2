@@ -1,6 +1,5 @@
 import csv
 import datetime
-
 import pandas as pd
 
 from configs.config import EXCLUDED_ATTRS, GROUPING_VALUES
@@ -65,6 +64,7 @@ def count_data_between_timestamp(
     :param end: End of period as datetime.
     :return: Number of items falling within the time period.
     """
+    # If at least 1 filter passed
     if any(filters.values()):
         filters = {key: value for key, value in filters.items() if value}
         queryset = db.session.query(Event)

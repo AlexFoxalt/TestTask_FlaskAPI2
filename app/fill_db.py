@@ -2,7 +2,6 @@ import csv
 from datetime import datetime
 
 from models import db, Event
-
 from configs.config import COLUMN_NAME_INDEXES
 
 
